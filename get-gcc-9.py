@@ -139,11 +139,11 @@ if __name__=='__main__':
     isexists=os.path.exists(dire)
     if not isexists:
         os.mkdir(dire)
-    dire=dire+'\\'
-    
+    dire+='\\'
+    url+='/'
     for i in range(0,fnamelen):
         print('[开始下载]:'+fname[i])
-        downloader(url+'/'+fname[i],fname[i])
+        downloader(url+fname[i],dire+fname[i])
         print('[下载完成]\n[剩余]:%d/%d'% (fnamelen-i-1,fnamelen))
 
 
